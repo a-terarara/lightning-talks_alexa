@@ -1,10 +1,10 @@
 {
-  "name": "presentation-sls",
+  "name": "lightning-talks_alexa",
   "version": "1.0.0",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "https://github.com/a-terarara/lightning-talks-sls.git"
+    "url": "https://github.com/a-terarara/lightning-talks_alexa.git"
   },
   "engines": {
     "node": ">=4.2.0"
@@ -25,11 +25,11 @@
     "bespoke-scale": "^1.0.1",
     "browserify": "^16.2.0",
     "del": "^3.0.0",
-    "gh-pages": "^1.1.0",
-    "gulp": "^3.9.1",
+    "gh-pages": "^2.0.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cli": "^2.0.1",
-    "gulp-connect": "^5.5.0",
+    "gulp-connect": "^5.7.0",
     "gulp-csso": "^3.0.1",
     "gulp-plumber": "^1.2.0",
     "gulp-pug": "^4.0.1",
