@@ -19,7 +19,8 @@ html
         <div style="position: absolute;bottom: 10px;right: 10px"><i class="far fa-hand-point-right"></i></div>
 
       section
-        h2 自己紹介<br/><br/>
+        h2 自己紹介
+        br
         <image src="images/27805556.png" height="100" width="100"/>
         br
         div(style={"text-align": "left"})
@@ -29,7 +30,7 @@ html
           h4 得意言語：ECMAScript　　　　　 　 　 　　　　　　　　　　
           h4 <br/><i class="fab fa-github">GitHub：</i>a-terarara　　　　　　　　　　　　　　　　　 　
           h4 今回の資料：https://a-terarara.github.io/lightning-talks_alexa
-        <br/><br/><br/>　　　　　　　　　　　　　　　　　　
+        <br>　　　　　　　　　　　　　　　　　　
         <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
 
       section
@@ -37,7 +38,7 @@ html
         div(style={"text-align": "left"})
           ul.build.build-items
             li <h2>1. 今更Alexa？</h2>
-            li <h2>2. Alexaの中のお話</h2>
+            li <h2>2. Alexaの始め方</h2>
             li <h2>3. Alexa Structure</h2>
         <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
 
@@ -77,7 +78,7 @@ html
         h3 Voice User Interfaceの歴史
         div(style={"text-align": "left"})
           h4 1952年Audrey誕生
-        img(src="https://cdn57.androidauthority.net/wp-content/uploads/2012/04/IBM-Shoebox-front.jpg" height="70%")
+        img(src="https://miro.medium.com/max/1278/0*5xnYyyvT7hjQ_EX7.png" height="70%")
         h4 当時はSpeech Recognitionと総称されていた
         br
         div(style={"text-align": "right"})
@@ -105,45 +106,93 @@ html
         h2 ユーザ企業にAlexaSkillの選択肢を与えよう
 
       section
-        h2 スマホでカメラ使っていたら大体AR
-        img(src="images/mapping.jpg" height="150" width="230")
-        img(src="images/pokego.jpg" height="150" width="230")
+        h1 Alexaの始め方
         <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
 
       section
-        h2 ARの主要技術
+        h3 突然クイズ
+        h4 Alexaってどーれだ？
+        img(src="https://images-fe.ssl-images-amazon.com/images/G/09/kindle/categorypage/echo_alexa/cp_desktop_sh.jpg" height="80%")
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+
+      section
+        h3 実はこの子たちAlexaじゃなくてAmazon Echoなんです。
+        img(src="https://images-fe.ssl-images-amazon.com/images/G/09/kindle/categorypage/echo_alexa/cp_desktop_skills.jpg" height="70%")
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+
+      section
+        h2 もとい
+        h2 Alexaの始め方
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+
+      section
+        h3 <a href="https://developer.amazon.com/ja/alexa-skills-kit/training/building-a-skill#%E3%82%B9%E3%82%AD%E3%83%AB%E9%96%8B%E7%99%BA%20%E5%9F%BA%E7%A4%8E%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA">スキル開発 基礎トレーニングシリーズ</a>を読む
         table#desc
           tr
-            th ジャンル
+            th 索引
             th 概要
           tr
-            td 位置認識
-            td GPS、各種センサー
+            td <a href="https://developer.amazon.com/ja/blogs/alexa/post/31c9fd71-f34f-49fc-901f-d74f4f20e28d/alexatraining-firstskill">初めてのスキル開発</a>
+            td Tutorial
           tr
-            td マーカーレス
-            td 平面検出・垂直平面検出
+            td <a href="https://developer.amazon.com/ja/blogs/alexa/post/93bad9f6-377f-4ada-887c-279e7346f729/alexatraining-customskill">カスタムスキル</a>
+            td Skill・Test・Backend説明
           tr
-            td マーカー
-            td 画像検出・立体検出
+            td <a href="https://developer.amazon.com/ja/blogs/alexa/post/36665011-8980-471b-bcb0-d51e1d19f06a/alexatraining-customskill-slots">スロットの利用</a>
+            td IntentSlots・同義語
           tr
-            td その他
-            td 顔認識
+            td <a href="https://developer.amazon.com/ja/blogs/alexa/post/319a5083-7858-4cb2-987e-5bcd7f833533/alexatraining-dialog">ユーザーとの対話</a>
+            td Session・Reprompt
+          tr
+            td <a href="https://developer.amazon.com/ja/blogs/alexa/post/a35ad62f-dafa-4f4b-9648-a77913129871/alexatraining-advanceddevelopment">本格的なスキル開発に向けて</a>
+            td ASK CLI・Skill公開
+        div(style={"text-align": "left"})
+          h4 　　　　　　　　　　　　　　　　　　　　所要時間：10分
         <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
-            
+
       section
-        h2 初心者編：画像認識するの巻
-        h3 imageAnchor追加
+        h2 開発に必要なもの
+        div(style={"text-align": "left"})
+          ul.build.build-items
+            li <h3>・メールアドレス（またはAmazonアカウント）</h3>
+            li <h3>以上</h3>
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+      
+      section
+        h2 スマホあればechoも不要です
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+      
+      section
+        h2 AWSアカウントも不要です
+        img(src="images/skill_backend.png" width="90%")
+        h4 30日間無料枠を勝手に用意してくれます
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+      
+      section
+        h1 Alexa Structure
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+
+      section
+        h2 全体
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+
+      section
+        h2 Skill
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+
+      section
+        h2 Backend
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+
+      section
+        h2 I/F
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+
+      section
+        h2 code？
         pre
           code.language-javascript.
-            override func viewWillAppear(_ animated: Bool) {
-              let configuration = ARWorldTrackingConfiguration()
-              // マーカー画像の読み込み
-              let images = ARReferenceImage.referenceImages(
-                inGroupNamed: "AR Resources", bundle: nil)
-              configuration.detectionImages = images
-              
-              sceneView.session.run(configuration)
-            }
+            const dummy = "dummy"
         <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
       
       section
