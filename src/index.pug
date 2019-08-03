@@ -51,11 +51,7 @@ html
         div(style={"text-align": "left"})
           h3 <image src="images/27805556.png" height="20" width="20"/>「Alexaはskillとbackendからなるよ」
           h3 <image src="images/27805556.png" height="20" width="20"/>「skillには呼び出しとIntentがあってさ～」
-          h3 <i class="fas fa-users"></i>「へ～知らんかったばい」
-        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
-
-      section
-        h2 <image src="images/27805556.png" height="40" width="40"/>.oO (・・・意外と知られてないもんだなぁ)
+          h3 <i class="fas fa-users"></i>「へ～知らんかったわぁ」
         <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
 
       section
@@ -75,17 +71,6 @@ html
           h6 https://www.gartner.com/jp/newsroom/press-releases/pr-20180822
       
       section
-        h3 Voice User Interfaceの歴史
-        div(style={"text-align": "left"})
-          h4 1952年Audrey誕生
-        img(src="https://miro.medium.com/max/1278/0*5xnYyyvT7hjQ_EX7.png" height="70%")
-        h4 当時はSpeech Recognitionと総称されていた
-        br
-        div(style={"text-align": "right"})
-          h6 https://en.wikipedia.org/wiki/Speech_recognition より
-        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
-
-      section
         h3 2019/7/22週の日本におけるAlexaSkillリリース数<br><br><br><br><br>
         img(src="images/alexerch.png")
         <br><br><br>
@@ -103,7 +88,7 @@ html
         <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
 
       section
-        h2 ユーザ企業にAlexaSkillの選択肢を与えよう
+        h2 AlexaSkillにはまだチャンスが転がっている？
 
       section
         h1 Alexaの始め方
@@ -122,7 +107,6 @@ html
 
       section
         h2 もとい
-        h2 Alexaの始め方
         <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
 
       section
@@ -174,10 +158,64 @@ html
 
       section
         h2 全体
+        img(src="https://m.media-amazon.com/images/G/09/mobile-apps/dex/alexa/alexa-skills-kit/jp/blog/trainingv3/customskill/0/insidecoffeeshop3.jpg" width="100%")
+        h4 Backendが会話を受け取って処理を行う
         <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
 
       section
         h2 Skill
+        div(style={"text-align": "left"})
+          h3 Alexa Skill１つにつき１つの呼び出し名を持っています。
+          h3 例１：「<font color="red">Alexa</font>、<font color="blue">天気</font>を教えて」
+          h3 例２：「<font color="red">Alexa</font>、<font color="blue">ピカチュウ</font>を呼んで」
+          h3 <font color="red">ウェイクワード「Alexa」</font>、<font color="blue">呼び出し名「天気」</font>
+          h4 呼び出し名によって呼び出すSkillを切り替えています
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+
+      section
+        h2 Skill
+        div(style={"text-align": "left"})
+          h3 Skill内の会話にはセッションを持ちます
+          h3 <font color="green"><i class="fas fa-user"></i></font>「Alexa、コーヒーショップを開いて」
+          h3 <i class="fas fa-volume-up"></i>「何をご注文なさいますか」
+          h3 <font color="green"><i class="fas fa-user"></i></font>「アイスコーヒーください」
+          h3 <i class="fas fa-volume-up"></i>「ご注文ありがとうございます」
+          h4 呼び出し～会話の終わりまでAlexaSkillは待ち受けています
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+
+      section
+        h2 Skill
+        div(style={"text-align": "left"})
+          h3 Skillは複数のインテント＝会話パターンを持ちます
+          h3 例１：「アイスコーヒーください」
+          h3 例２：「ストローもつけてください」
+          h3 例３：「３杯お願いします」
+          h4 あらかじめ会話パターンは定義しておきます
+          h4 つまりユーザの会話を予測しておかなければなりません
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+
+      section
+        h2 インテント
+        div(style={"text-align": "left"})
+          h3 インテントにはフレーズスロット＝可変長の引数を定義できます
+          h3 例１：「<font color="red">アイスコーヒー</font>ください」
+          h3 例２：「<font color="red">紅茶</font>ください」
+          h3 <font color="red">フレーズスロット「アイスコーヒー」、「紅茶」</font>
+          h4 ユーザが自由に発話出来る引数を定義しておき、Backendの処理内容を変えられます
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+
+      section
+        h2 SearchQuery
+        div(style={"text-align": "left"})
+          h3 フレーズスロットは飲み物の種類等Amazon側で予め用意された単語を拾います
+          h3 自由な単語を拾うためにはSearchQueryを使います
+          h3 ただし、<font color="red">Alexa側で良い感じな変換処理をかけてくれない</font>ので、予想したフレーズと実際の発話フレーズが異なることがあります
+          h3 例：「コーヒー」⇒「こおひい」
+        <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+
+      section
+        h2 ここまで整理
+        img(src="./images/intent_sequence.png" height="90%")
         <div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
 
       section
