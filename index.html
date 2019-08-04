@@ -199,19 +199,25 @@
       </section>
       <section>
         <h2>アカウントリンク</h2>
-        <h4>https://developer.amazon.com/ja/docs/account-linking/understand-account-linking.html</h4><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+        <h3>認可フローで別のリソースにアクセスする機能</h3><img src="./images/accountlink_sequence.png" height="80%"><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
       </section>
       <section>
         <h2>ユーザ情報取得API</h2>
-        <h4>https://developer.amazon.com/ja/docs/custom-skills/request-customer-contact-information-for-use-in-your-skill.html</h4><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+        <h3>Amazonアカウント情報にアクセスする機能</h3><img src="./images/userinfo_sequence.png" height="70%"><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
       </section>
       <section>
         <h2>Skill Connections</h2>
-        <h4>https://developer.amazon.com/ja/blogs/alexa/post/fd80044d-af9e-4b10-be68-abc8aa06b86e/skill-connections-now-skills-can-work-together-to-help-customers-get-more-done-developer-preview-jp</h4><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+        <h3>別のSkillに連携出来るPreview機能</h3><img src="https://m.media-amazon.com/images/G/01/DeveloperBlogs/AlexaBlogs/default/Connectionsblog._CB482811562_.png" width="80%"><br>
+        <div style="text-align:left;">
+          <h3>例：「Alexa、Amazonで〇〇を購入して」</h3>
+          <h3>　　「注文書をプリンタで印刷して」</h3>
+          <h3>　　　⇒（別のSkillに情報連携して印刷予約）</h3>
+        </div><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
       </section>
       <section>
         <h2>声帯の変更</h2>
-        <h4>https://developer.amazon.com/ja/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html#audio</h4><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+        <h3>Backendのreturn時にSSML（音声合成マークアップ言語）を定義することで声帯を変更する</h3>
+        <h3>エフェクトの変更やmp3を読み上げさせるオプションもある</h3><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
       </section>
       <section>
         <h2>Backend</h2>
@@ -219,27 +225,54 @@
           <h3>BackendはAWS Lambda・・・と思いきや下記の要件を満たせればなんでも良いです。</h3>
           <h3>・Rest API</h3>
           <h3>・I/FはJSON</h3>
+          <h3>・エンドポイントは１つ</h3>
           <h3>・SSL通信</h3>
           <h4>つまり言語もサーバも自由に選べます</h4>
         </div><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
       </section>
       <section>
-        <h2>Moneyless Architecture</h2>
-        <h4>画像</h4><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+        <h2>Moneyless Architecture</h2><img src="./images/moneyless_architecture.png"><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
       </section>
       <section>
-        <h2>I/F</h2><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+        <h2>I/F</h2>
+        <h3>I/Fは全てJSONで処理されます</h3>
+        <div style="text-align:left;">
+          <h4>サンプルリクエスト</h4>
+          <pre><code class="language-javascript">{
+  "request": {
+    "type": "IntentRequest",
+    "intent": {
+      "name": "HelloWorldWithNameIntent",
+      "slots": {
+        "firstName": {
+          "name": "firstName",
+          "value": "terarara",
+          "confirmationStatus": "NONE"
+        },
+      ・・・</code></pre>
+          <h4>HelloWorldWithNameIntentにfirstNameを渡しています</h4>
+        </div><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
       </section>
       <section>
-        <h2>単体テスト</h2><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+        <h2>単体テスト</h2>
+        <div style="text-align:left;">
+          <h3>I/F情報を保持しておけば単体テストコードも書けます</h3>
+          <pre><code class="language-javascript">const request = {・・・} //JSONをコピペ
+describe("お試し", () => {
+  it("requestを処理すると注文を受け付ける", () => {
+    const response = target(request, res);
+    assert.deepEqual(
+      res.body.response.outputSpeech.ssml,
+      "&lt;speak>ご注文ありがとうございます&lt;/speak>"
+    );
+  });
+}</code></pre>
+        </div><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
       </section>
       <section>
         <h2>コード管理</h2>
-        <h3>JSON</h3>
-        <h3>backend</h3><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
-      </section>
-      <section>
-        <h2>AlexaでHappyなEngineerLifeを。</h2><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
+        <h3>AlexaSkillはJSONエクスポートすることでコード管理が可能です</h3>
+        <h3>backendは言わずもがな、管理しておきましょう</h3><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
       </section>
       <section>
         <h1>以上</h1><div style="position: absolute;bottom: 10px;left: 10px"><a href="#1"><i class="far fa-hand-point-left"></i></a></div>
